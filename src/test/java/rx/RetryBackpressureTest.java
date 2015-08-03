@@ -60,7 +60,7 @@ public class RetryBackpressureTest {
         AbstractOnSubscribe.create((state) ->
             state.onNext(2L))
     )
-        .retry(3)
-        .subscribeOn(Schedulers.io());
+    .retry(3)
+    .subscribeOn(Schedulers.computation());
   }
 }
